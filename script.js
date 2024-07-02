@@ -14,7 +14,15 @@ function drop(e) {
 	const droppedOnElement=e.target
 	const droppedOnElementParent=e.target.parentNode
   	
-	const temp=draggedElementParent.childNodes[1].id
+	const tempId=draggedElementParent.childNodes[1].id
 	draggedElementParent.childNodes[1].id=droppedOnElementParent.childNodes[1].id
-	droppedOnElementParent.childNodes[1].id=temp	
+	droppedOnElementParent.childNodes[1].id=tempId	
+	
+	const tempSrc=draggedElementParent.childNodes[1].src
+	draggedElementParent.childNodes[1].src=droppedOnElementParent.childNodes[1].src
+	droppedOnElementParent.childNodes[1].src=tempSrc	
+
+	// console.log(draggedElementParent.childNodes[1],droppedOnElementParent)
+	
+	
 }
